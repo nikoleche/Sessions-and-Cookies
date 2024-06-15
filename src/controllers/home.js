@@ -8,6 +8,8 @@ router.get("/", (req, res) => {
 
   const useDark = cookies.theme === "dark";
 
+  req.session.message = "new cookie";
+
   res.render("home", { useDark });
 });
 
